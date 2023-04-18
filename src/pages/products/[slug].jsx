@@ -20,8 +20,9 @@ export default function Products({ data }) {
 export async function getStaticProps(context) {
   /* slug kommer her fra [slug].jsx */
   const id = context.params.slug;
-  const category = context.params.slug.category;
-  const api = "https://kea-alt-del.dk/t7/api/products/" + id + category;
+  /* const category = context.params.slug.category; */
+  /*  const api = "https://kea-alt-del.dk/t7/api/products/" + id + category; */
+  const api = "https://kea-alt-del.dk/t7/api/products/" + id;
   const res = await fetch(api);
   if (res.status != 200) {
     return {

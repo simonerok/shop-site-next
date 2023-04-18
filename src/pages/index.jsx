@@ -13,7 +13,7 @@ export default function Home({ data }) {
       <section className="products">
         {data.map((obj) => {
           return (
-            <Anchor href={"/products/" + obj.id + obj.category}>
+            <Anchor /* href={"/products/" + obj.id + obj.category} */ href={"/products/" + obj.id}>
               <article>
                 <h2>{obj.productdisplayname}</h2>
                 <p>{obj.category}</p>
